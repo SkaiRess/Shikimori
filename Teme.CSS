@@ -34,7 +34,7 @@
   --word-spacing: .375em;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 96px) {
   :root {
     --l-margin: 24px;
     --l-gutter: 24px;
