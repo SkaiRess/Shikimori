@@ -1,38 +1,7 @@
 /* ========================================
    ОСНОВНЫЕ ПЕРЕМЕННЫЕ
 ======================================== */
-:root {
-  --color-black: #212121;
-  --color-white: #fafafa;
-  --color-info: #4f91e8;
-  --color-success: #66bb6a;
-  --color-warning: #ef8d50;
-  --color-danger: #ef5350;
-  --color-negative: #c5484e;
-  --color-neutral: #549db3;
-  --color-positive: #73a349;
-  --color-offtop: #f58ebb;
-  --color-violet: #a64fe8;
-  --color-yellow: #e8dc4f;
-  --color-magenta: #e84fde;
-  --color-marker-offtop-rgb: 245 142 187;
-  --color-marker-new-rgb: 79 145 232;
-  --marker-background-opacity: .16;
-  --l-unit: 8px;
-  --layout-gutter: 16px;
-  --layout-margin: 16px;
-  --u-grid: 8px;
-  --l-gutter: 16px;
-  --l-margin: 16px;
-  --l-avatar: 40px;
-  --l-sticky--top: 56px;
-  --border-round: 50%;
-  --border-rounded: 3px;
-  --font-size: 16px;
-  --font-main: 'Arial', sans-serif;
-  --font-alt: var(--font-main);
-  --word-spacing: .375em;
-}
+
 
 @media (min-width: 960px) {
   :root {
