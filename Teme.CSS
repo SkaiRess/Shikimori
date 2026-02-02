@@ -1057,13 +1057,6 @@ body[data-locale] .b-feedback>.marker-positioner>.marker-text::before,
   }
 }
 
-.l-top_menu-v2 .icon-avatar img {
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  border-radius: var(--border-round, 50%);
-}
-
 .l-top_menu-v2 .icon-anime_list::before,
 .l-top_menu-v2 .icon-manga_list::before,
 .l-top_menu-v2 .icon-characters::before {
