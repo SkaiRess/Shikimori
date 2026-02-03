@@ -1,1 +1,140 @@
+/*  Цветовые переменные и переменные макета */
+:root{--color-black: #212121;--color-white: #fafafa;--color-info: #4f91e8;--color-success: #66bb6a;--color-warning: #ef8d50;--color-danger: #ef5350;--color-negative: #c5484e;--color-neutral: #549db3;--color-positive: #73a349;--color-offtop: #f58ebb;--color-violet: #a64fe8;--color-yellow: #e8dc4f;--color-magenta: #e84fde;--color-marker-offtop-rgb: 245 142 187;--color-marker-new-rgb: 79 145 232;--marker-background-opacity: .16;--l-unit: 8px;--layout-gutter: 16px;--layout-margin: 16px;--u-grid: 8px;--l-gutter:
 
+/*  Сброс и базовая стилизация */
+html{height:100%;overflow-x:hidden} body{position:relative;min-height:100%;background-attachment:fixed;background-color:var(--color-background);background-image:var(--user-background);background-size:cover;color:var(--color-text-primary);font-size:16px;font-weight:400;line-height:1.5} @media(max-width: 1024px){body{background-color:var(--color-background) !important}} .l-page{min-height:100%;padding:16px var(--l-margin) 0;background:var(--color-background)} .l-footer{padding:0;margin:1em 0 0;line-height:inherit}
+
+/*  Основной контент и отступы */
+@media(min-width: 960px){:root{--l-margin: 24px;--l-gutter: 24px;--l-avatar: 48px}}
+
+/*  Стили для заголовков */
+h1,header.head h2{padding:8px 0;font-family:inherit;font-size:24px;line-height:32px;color:inherit} header.head h1 a.back:nth-child(n),header.head h2 a.back:nth-child(n){margin:-4px 24px -4px -8px !important} @media(min-width: 1025px){header.head h1 a.back:nth-child(n),header.head h2 a.back:nth-child(n){margin:-4px 16px -4px 0 !important}} header.head h1 a.back::before,header.head h2 a.back::before{content:"arrow_back";position:static;color:inherit} header.head h1 a.back::after,header.head h2 a.back::after{display:none} header.head .misc,header.head a.edit{color:var(--color-text-disabled)} header.head a.misc,header.head a.edit{color:var(--color-link)} header.head a.misc:hover,header.head a.edit:hover{color:var(--color-link-hover)} header.head a.misc:active,header.head a.edit:active{color:var(--color-link-active)} header.head .notice{margin:.5rem 0;margin-top:-0.25rem;font-size:.875rem;line-height:1.25rem} .headline{padding:8px 0;margin:8px 0;background:none;border:0;font-size:24px;font-weight:normal;line-height:32px;text-transform:none} .p-profiles
+
+/*  Стили для меню */
+.l-top_menu-v2 .menu-icon.contest::after,.l-top_menu-v2 .menu-icon.mail:after{top:auto;width:var(--badge-size);height:var(--badge-size);margin-top:calc(var(--badge-size)/-2);margin-left:calc(var(--badge-size)/2);background-color:var(--color-accent);border:0;color:var(--color-text-on-accent);font-family:inherit;font-size:.75em;font-weight:bold;line-height:var(--badge-size)} .l-top_menu-v2 .menu-icon.contest::after{content:attr(data-count)} .l-top_menu-v2 .menu-icon.trigger{width:auto} .l-top_menu-v2 .menu-dropdown>span{padding:0 1em;background:rgba(0,0,0,0)}
+
+/*  Стили для мобильного меню */
+.l-page.menu-expanded .l-menu{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)} .menu-slide-outer .l-content{margin-left:0 !important}} .l-page
+
+/*  Стили для всплывающих сообщений */
+.toast-message{display:inline-block;vertical-align:top;line-height:1.5rem} .toast-top-right{top:auto;bottom:0;right:auto;left:0} #toast-container{line-height:1.5rem} #toast-container>div{width:100%;max-width:25rem;padding:.75rem 1.5rem;margin:auto;background-size:0;border-radius:0} #toast-container>.toast-error::before{content:"error_outline";float:left;margin:0 1rem 0 -0.5rem;font-size:1.5rem !important} .toast,.toast-success
+
+/*  Стили для всплывающих сообщений (WazeDev) */
+.toast,.toast-success,.toast-error{background-color:#323232} .toast-container-wazedev>div{min-width:344px;padding:14px 16px;margin:0 0 8px 8px;background:#333 top/0 0 no-repeat;border-radius:4px;box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);font-size:14px;line-height:20px} @media(min-width: 960px){.toast-container-wazedev>div{margin:0 0 16px 16px}} .toast-container-wazedev
+
+/*  Стили для элементов списка с датами */
+.b-ban,.b-log_entry,.b-user_rate_log{position:relative;padding:8px 0;font-size:14px;line-height:24px} @media(min-width: 1025px){.b-ban,.b-log_entry,.b-user_rate_log{padding:4px 0}} .b-ban>span,.b-log_entry>span,.b-user_rate_log>span{padding-right:var(--word-spacing)} .b-ban .date,.b-log_entry .date,.b-user_rate_log .date{color:var(--color-text-hint);font-size:inherit} .b-ban a
+
+/*  Стили для спойлеров в логах */
+.b-ban .spoiler.collapse,.b-log_entry .spoiler.collapse,.b-user_rate_log .spoiler.collapse{align-self:flex-start;position:relative;padding:0 !important;margin:-4px 0 -4px auto} .b-ban .spoiler.collapse span,.b-log_entry .spoiler.collapse span,.b-user_rate_log .spoiler.collapse span{--rotate: 180deg;--text: "Спрятать";--text-en: "Hide";display:block !important;padding:6px;backface-visibility:hidden;border:0;border-radius:var(--border-rounded);color:var(--color-text-hint);font-size:0;transition:.16s cubic-bezier(0.4, 0, 0.6, 1)} .b-ban .spoiler.collapse span[style="display: none;"],.b-log_entry .spoiler.collapse span[style="display: none;"]
+
+/*  Стили для свернутых спойлеров */
+.b-ban .spoiler.collapse span[style="display: none;"],.b-log_entry .spoiler.collapse span[style="display: none;"],.b-user_rate_log .spoiler.collapse span[style="display: none;"]{--rotate: 0deg;--text: "Показать детали";--text-en: "Show details"} .b-ban .spoiler.collapse span:hover,.b-log_entry .spoiler.collapse span:hover,.b-user_rate_log .spoiler.collapse span:hover{background:var(--color-surface-hover);color:var(--color-text-secondary)} .b-ban .spoiler.collapse span::before,.b-log_entry .spoiler.collapse span::before,.b-user_rate_log .spoiler.collapse span::before{content:"expand_more";font-size:20px
+
+/*  Стили для иконки и текста спойлера */
+.b-ban .spoiler.collapse span::before,.b-log_entry .spoiler.collapse span::before,.b-user_rate_log .spoiler.collapse span::before{content:"expand_more";font-size:20px !important;transform:rotate(var(--rotate));transition:inherit} .b-ban .spoiler.collapse span::after,.b-log_entry .spoiler.collapse span::after,.b-user_rate_log .spoiler.collapse span::after{content:var(--text);margin:0 12px} [data-locale=en] .b-ban .spoiler.collapse span::after,[data-locale=en] .b-log_entry .spoiler.collapse span::after,[data-locale=en] .b-user_rate_log .spoiler.collapse span::after{content:var(--text-en)} .b-ban .spoiler.collapsed,.b-log_entry .spoiler.collapsed,.b-user_rate_log
+
+/*  Стили для четных элементов лога */
+.moderation a[class]:not(.link).accept::after,.b-log_entry .moderation a[class]:not(.link).approve::after{background:var(--color-success)} .b-log_entry .moderation a[class]:not(.link).reject::after,.b-log_entry .moderation a[class]:not(.link).delete::after{background:var(--color-danger)} .b-log_entry .moderation a[class]:not(.link)::after{content:"";position:absolute;inset:0;background:var(--color-success);border-radius:var(--border-rounded);opacity:.08;transition:opacity .24s cubic-bezier(0.4, 0, 0.6, 1);z-index:-1} .b-log_entry .moderation a[class]:not(.link):hover::after{opacity:.12} .b-log_entry .moderation a[class]:not(.link):active::after{opacity:.16} .b-log_entry>.reason{font-size:inherit} .b-abuse_request
+
+/*  Стили для BBCode примеров */
+,0,0,0);border-radius:var(--border-rounded);color:#eee} .b-bb_codes-examples .example .title{color:var(--color-text-hint);font-size:14px} .b-bb_codes-examples .result .title{color:var(--color-text-hint);font-size:14px} .b-bb_codes-examples .notice{color:var(--color-text-hint);font-size:14px} .b-bb_codes-examples .notice b[style]{color:var(--color-text-primary) !important} .b-block_list li{padding:0 .5rem;margin:0 -0.5rem;color:var(--color-text-secondary);font-family:inherit;line-height:1.5rem} .b-block_list li:hover,.b-block_list
+
+/*  Стили для элементов каталога */
+,0,0,0);box-shadow:none} .collection_score .collection_score_marker{display:inline-flex;align-items:center;padding:3px 8px 1px;margin:auto;background-color:rgba(0,0,0,.85);border-radius:24px;color:#f2f2f2;font-size:14px;font-weight:bold;line-height:20px} .collection_score .collection_score_marker::before{content:"star";margin:-2px 4px 0 -1px;color:var(--color-accent);font-size:16px !important} .collection_score .score_marker_star{display:none} .b-catalog_entry-tooltip .entry-tooltip_container>a{flex-shrink:0} .b-catalog_entry-tooltip
+
+/*  Стили для кода */
+.info .value{color:var(--color-text-disabled)} code.b-code_inline{vertical-align:middle;padding:0 3px;background-color:var(--color-surface);border-color:var(--color-surface);border-radius:2px;color:var(--color-text-primary);font-size:.875rem;line-height:inherit} pre[data-dynamic=code_highlight]{margin:.5rem 0} .b-code-v2{padding:1rem;border-radius:3px;font-style:normal;font-weight:normal;line-height:1.5;text-align:left} .b-code-v2::before{top:1rem;right:1rem} .tooltip-details .b-code-v2::before{display:none} .hljs-keyword,.hljs-literal{color:inherit} .hljs-deletion{background-color:rgba(111,42,42
+
+/*  Стили для видео */
+.b-video.b-coub{background:rgba(0,0,0,0)} .b-video.b-coub::before{display:none} .b-video.b-coub a.video-link{height:auto;padding:0} .b-video.b-coub a.video-link::before{display:block} .b-db_entry{line-height:inherit} .b-db_entry>.c-about .c-info-left,.b-db_entry>.c-about .c-info-right,.b-db_entry>.c-about .c-info-left:last-child,.b-db_entry>.c-about .c-info-right:last-child{margin-bottom:8px !important} .b-db_entry>.c-about .contest_winners{margin-top:0;margin-bottom:1em} .b-db_entry>.c-about
+
+/*  Стили для диалогов */
+calc(var(--l-margin)*-1) 0 56px;background-color:var(--color-border)} @media(min-width: 960px){.b-dialog:not(:last-child)::after{margin-left:64px}} .b-dropzone{padding:12px;background-color:var(--color-surface);border:2px dashed var(--color-border);border-radius:var(--border-rounded)} .b-dropzone:hover{border-color:var(--color-primary)} .b-dropzone:hover::before,.b-dropzone:hover input[type=file]{color:var(--color-text-secondary)} .b-dropzone::before{inset:0;display:flex;align-items:center;justify-content:center;margin:auto;color:var(--color-text-disabled);font-size:14px;transform:none} .b-dropzone
+
+/*  Стили для чекбоксов */
+!important;height:1.125rem;padding:0;margin:.1875rem 1rem .1875rem 0;background-color:rgba(0,0,0,0);background-repeat:no-repeat;background-size:1.125rem;background-position:-0.125rem -0.125rem;border:.125rem solid var(--color-text-hint);border-radius:.125rem;box-sizing:border-box;box-shadow:none;transition:.24s cubic-bezier(0.4, 0, 0.2, 1);-webkit-appearance:none;-moz-appearance:none;appearance:none} .b-input input[type=checkbox]:disabled{border-color:var(--color-text-disabled)} .b-input input[type=checkbox]:checked{--check-black: url("data:image/svg+xml;base64
+
+/*  Стили для сообщений */
+.375em} @media(min-width: 960px){:root{--l-margin: 24px;--l-gutter: 24px;--l-avatar: 48px}} html{height:100%;overflow-x:hidden} body{position:relative;min-height:100%;background-attachment:fixed;background-color:var(--color-background);background-image:var(--user-background);background-size:cover;color:var(--color-text-primary);font-size:16px;font-weight:400;line-height:1.5} @media(max-width: 1024px){body{background-color:var(--color-background) !important}} .l-page{min-height:100%;padding:16px var(--l-margin) 0;background:var(--color-background)} .l-footer{padding:0;margin:1em 0
+
+/*  Стили для опросов */
+.375em} @media(min-width: 960px){:root{--l-margin: 24px;--l-gutter: 24px;--l-avatar: 48px}} html{height:100%;overflow-x:hidden} body{position:relative;min-height:100%;background-attachment:fixed;background-color:var(--color-background);background-image:var(--user-background);background-size:cover;color:var(--color-text-primary);font-size:16px;font-weight:400;line-height:1.5} @media(max-width: 1024px){body{background-color:var(--color-background) !important}} .l-page{min-height:100%;padding:16px var(--l-margin) 0;background:var(--color-background)} .l-footer{padding:0;margin:1em 0
+
+/*  Стили для рейтинга */
+0;line-height:inherit} .b-poll .poll{margin-bottom:.5em} .b-poll .poll-variants{padding:.25em 0;margin:0} .b-poll .poll-variants .poll-variant{padding:.25em 0;line-height:1.5em} .b-poll .poll-variants .poll-variant label{margin-bottom:0;border:0;color:var(--color-text-primary)} .b-poll .poll-variants .poll-variant.result{margin-bottom:.5em} .b-poll .poll-variants .poll-variant.result .bar .bar,.b-poll .poll-variants
+
+/*  Стили для звезд рейтинга */
+1 auto;color:inherit} .b-rate .score-notice{position:absolute;inset:auto -50% 92%;color:inherit;font-size:10px;text-transform:uppercase} .b-rate .score-value{line-height:36px} .b-rate .stars::before{width:auto !important;font-size:36px !important;letter-spacing:-3.6px} .b-rate .stars::after{display:none} .b-rate .stars.background{color:var(--color-border)} .b-rate .stars.background::before{content:""} .b-rate .stars.hover{color:var(--color-accent)} .b-rate .stars.score{color:var(--color-primary)} .b-rate .stars.score-1::before{content:""} .b-rate .stars.score-2::before{content:""} .b-rate
+
+/*  Стили для языковых текстовых переменных */
+текст. Восстановить?";--text-change-button: "Изменить";--text-contest-winners: "Победы в турнирах";--text-dashboards-forum-button: "Форум";--text-dialogs-action-check: "Непрочитанные начиная со старых";--text-filters-add: "Исключить";--text-filters-minus: "Добавить";--text-filters-mylist: "Мой список";--text-messages-action-delete: "Удалить всё";--text-messages-action-done: "Прочитать всё";--text-profile-additionals-label: "Активность на сайте:";--text-profile-lifetime-label: "Активность";--text-profile-similarity-full: "Полная совместимость";--text-profile-similarity-high: "Высокая
+
+/*  Стили для мнений к обзорам */
+input:checked+span{background-color:var(--color-info) !important;color:#fff !important} .b-review_opinion_marker.is-neutral span::before{content:"sentiment_neutral"} .b-review_opinion_marker.is-neutral span::after{content:"Нейтральный"} .b-review_opinion_marker.is-negative input:checked+span{background-color:var(--color-danger) !important;color:#fff !important} .b-review_opinion_marker.is-negative span::before{content:"sentiment_very_dissatisfied"} .b-review_opinion_marker.is-negative span::after{content:"Отрицательный"} .b-reviews_navigation{margin-top:1em} .b-reviews_navigation
+
+/*  Стили для навигации по обзорам */
+span::after{content:"Отрицательный"} .b-reviews_navigation{margin-top:1em} .b-reviews_navigation .navigation-container{align-items:center;height:auto;margin-bottom:0} .b-reviews_navigation .navigation-container .label{align-items:center} .b-reviews_navigation .navigation-container .label::before{padding:0;color:inherit !important} @media(min-width: 1024px){.b-reviews_navigation a.navigation-node.is-active:hover{background:var(--color-overlay-primary-hovered);transition:background .16s cubic-bezier(0.4, 0, 0.6, 1)}} .b-reviews_navigation
+
+/*  Стили для других языковых переменных */
+"Полная совместимость";--text-profile-similarity-high: "Высокая совместимость";--text-profile-similarity-middle: "Средняя совместимость";--text-profile-similarity-search: "Найти похожих пользователей";--text-profile-similarity-weak: "Низкая совместимость";--text-profile-similarity-zero: "Нет совместимости";--text-review-on-subject: " отзыв к ";--text-review-to-review: "К отзыву";--text-sidebar-toggle-label: "меню";--text-to-top: "Вернуться наверх"} [data-locale=en]{--text-editor-button-help: "Help";--text-editor-label-link: "Page URL";--text-editor-label-anime:
+
+/*  Стили для редактора Shiki */
+footer .about-bb_codes>a{position:absolute;top:0;right:0;bottom:0;left:0} .b-shiki_editor .links .link-value[placeholder*=стран]+.ok::before,.b-shiki_editor .links .link-value[placeholder*=page]+.ok::before,.b-shiki_editor .images .link-value[placeholder*=стран]+.ok::before,.b-shiki_editor .images .link-value[placeholder*=page]+.ok::before,.b-shiki_editor .quotes .link-value[placeholder*=стран]+.ok::before,.b-shiki_editor .quotes .link-value[placeholder*=page]+.ok::before,.b-shiki_editor .upload .link-value[placeholder*=стран]+.ok::before,.b-shiki_editor .upload
+
+/*  Стили для строки статуса */
+.section:not(:last-child)::after{padding-right:8px;margin-right:8px;border-color:var(--color-border)} .b-status-line .section.about span.about{padding-left:.5rem} .b-status-line .section.about .b-link{padding-left:.5rem} .b-status-line .section.about .author{padding-left:.5rem} .b-status-line .section.main>span{align-self:center} .b-status-line .section.main>span:not(:last-child){margin-right:8px} .b-status-line .section.created_at time,.b-status-line .section.changed_at time,.b-status-line .section.main .comments,.b-status-line .section.main .collection-size,.b-status-line .section.main
+
+/*  Стили для времени и комментариев в строке статуса */
+.section.main .comments,.b-status-line .section.main .collection-size,.b-status-line .section.main .is-pinned{display:inline-flex;align-items:center;vertical-align:top} .b-status-line .section.created_at time::before,.b-status-line .section.changed_at time::before,.b-status-line .section.main .comments::before,.b-status-line .section.main .collection-size::before,.b-status-line .section.main .is-pinned::before{display:inline-block;vertical-align:top;padding:0;margin-right:8px;color:var(--color-text-disabled);font-size:18px !important} .b-status-line .section.created_at
+
+/*  Стили для таблиц */
+td{padding:.25em 0;line-height:1.5} .b-table td.num{white-space:nowrap} .b-table th{color:inherit} .b-table tr.border{border-color:var(--color-border)} .b-table a{color:var(--color-link)} .b-table a:hover{color:var(--color-link-hover)} .b-table a:active{color:var(--color-link-active)} .b-tag{padding:2px 6px !important;margin:2px 4px 2px 0;border:1px solid rgba(0,0,0,0);border-radius:var(--border-rounded);color:var(--color-text-primary);font-size:14px !important;font-weight:normal;line-height:18px !important;transition:.16s cubic-bezier(0.4, 0, 0.6,
+
+/*  Стили для тегов */
+!important;font-weight:normal;line-height:18px !important;transition:.16s cubic-bezier(0.4, 0, 0.6, 1)} .b-tag[href]{background-color:var(--color-surface);border:1px solid var(--color-border)} .b-tag[href]:hover,.b-tag[href]:focus,.b-tag[href].active{margin:2px 4px 2px 0;background-color:var(--color-surface-hover);border-color:var(--color-border);color:var(--color-text-primary)} .b-tag[href]:active{background-color:var(--color-surface-active)} .b-tag:last-child{margin-right:0} .b-tag:hover{margin:2px 4px 2px 0;background-color:rgba(0,0,0,0);color:var(--color-text-secondary)} .b-to-top
+
+/*  Стили для истории пользователя */
+.destroy{position:relative;width:auto;padding:6px;margin:-4px 0 -4px 4px;border-radius:var(--border-rounded);color:var(--color-text-hint);transition:.16s cubic-bezier(0.4, 0, 0.6, 1)} .b-user_history-line .destroy:hover{background:var(--color-overlay-text-hovered);color:var(--color-text-secondary);text-decoration:none} .b-user_history-line .destroy:active{background:var(--color-overlay-text-pressed)} .b-user_history-line .destroy::before{content:"delete";font-size:20px !important} .b-user_history-line .destroy::after{content:"Удалить";margin:0 .75rem} .b-user_rate
+
+/*  Стили для заметок пользователя */
+!important} .b-user_history-line .destroy::after{content:"Удалить";margin:0 .75rem} .b-user_rate .rate-show{margin-bottom:.5rem} .b-user_rate .rate-show .episodes{margin-bottom:8px;font-size:14px;line-height:32px} .b-user_rate .rate-show .note{padding:.5rem 1rem;background:var(--color-surface);border-radius:2px;color:var(--color-text-hint);font-size:.875rem;line-height:1.25rem;max-height:10rem;overflow-x:hidden;overflow-y:auto} .b-user_rate .rate-show .note::before{content:"Заметка";display:block;font-size:10px;font-weight:bold} .b-user_rate .rate-show .rate-number{margin-right:0} .b-user_rate
+
+/*  Стили для видео (повторение) */
+.video-link::before{content:"play_arrow";height:auto;padding:.05em;margin:auto;font-size:2.5rem !important;transform:translate3d(-50%, -50%, 0);pointer-events:none;z-index:3} .b-video .name{top:0;left:0;min-width:100%;padding:2px 8px 2px;background:linear-gradient(rgba(0, 0, 0, 0.56), transparent);font-size:.75rem;line-height:20px;text-align:left;backface-visibility:hidden} .b-video .marker{background:rgba(0,0,0,.8);border-radius:var(--border-rounded);color:#fff;font-size:.75em;font-style:normal;font-weight:bold;text-transform:none;backface-visibility:hidden;z-index:2} .b-video
+
+/*  Стили для иконок */
+.marker::before{content:"play_arrow";display:inline-block;vertical-align:top;padding:0;margin:1px 4px 0 -6px;font-size:18px !important} [data-icon]::before{content:attr(data-icon);display:inline-block;vertical-align:top;flex-shrink:0;margin-right:8px;margin-left:-4px;background-size:cover;background-position:center;overflow:hidden} @media(min-width: 960px){.u-tabs.--vertical{display:flex;border:1px solid var(--color-border);border-radius:var(--border-rounded)} .u-tabs.--vertical>div:not([data-tab]){flex-direction:column;flex-shrink:0;width:200px;padding:8px 0;border-right:1px solid
+
+/*  Стили для онлайн просмотра */
+.watch-online::before{content:"Онлайн просмотр";display:block;flex-basis:100%;margin:0 0 .5em;color:var(--color-text-hint);font-size:.875em;font-weight:bold;text-transform:uppercase} .p-animes-show .c-info-right .watch-online .b-link_button,.p-mangas-show .c-info-right .watch-online .b-link_button,.p-ranobe-show .c-info-right .watch-online .b-link_button{background:var(--color-surface);color:inherit;font-size:0 !important} .p-animes-show .c-info-right .watch-online .b-link_button:hover,.p-mangas-show .c-info-right .watch-online .b-link_button:hover,.p-ranobe-show .c-info-right .watch-online
+
+/*  Стили для меню аниме */
+.c-info-right .watch-online a.kind span{padding:0} .p-animes-show .c-info-right .watch-online a.kind span::after,.p-mangas-show .c-info-right .watch-online a.kind span::after,.p-ranobe-show .c-info-right .watch-online a.kind span::after{content:"transit_enterexit";display:inline-block;vertical-align:top;position:static;font-family:"Material Icons";font-size:16px;transform:rotate(180deg);line-height:1} .watch-online-placeholer{margin:2rem auto .5rem} .b-animes-menu>div{margin-bottom:24px} .b-animes-menu .subheadline{margin-bottom:0 !important} .b-animes-menu .friend-rate{padding:2px
+
+/*  Стили для пагинации */
+.pagination .link.link-prev::before,.p-recommendations-index .pagination .link.link-prev::before{content:"chevron_left"} .p-animes_collection-index .pagination .link.link-next::before,.p-recommendations-index .pagination .link.link-next::before{content:"chevron_right"} .p-animes-edit_field .block.edit-page>.cc-2>.c-column{width:100%} .p-animes-edit_field .block.edit-page .b-input textarea#reason{max-width:100%;height:auto;padding:.5rem !important;background:var(--color-overlay-text-hovered) !important;transition:background .24s cubic-bezier(0.4, 0, 0.6, 1),box-shadow .24s cubic-bezier(0.4, 0,
+
+/*  Стили для дашборда */
+.contests .contest a{display:block;padding:0 .5rem;color:var(--color-text-primary) !important;font-size:.875rem;line-height:2rem;text-overflow:ellipsis;white-space:nowrap;overflow:hidden} .p-dashboards-show .contests .contest a:hover{text-decoration:none} block2,.contests.block{margin-bottom:1.5rem;line-height:1.5rem} .p-dashboards-show .v2 .b-news_wall-topic::before{display:none} .p-dashboards-show .v2 .b-news_wall-topic .b-status-line .section.additional{padding-left:1em;white-space:nowrap} .p-dashboards-show .v2 .generated-news .subheadline{margin-bottom:0 !important} .p-dashboards-show .v2
+
+/*  Стили для статистики */
+2px 3px 0 rgba(0,0,0,.32);z-index:-1} .b-stats_bar .stat_names::before{content:"arrow_drop_down";display:block;position:absolute;top:0;right:0;width:2rem;height:2rem;padding:.25rem;margin:.5rem .25rem;border-radius:100%;font-size:1.5rem;font-family:"Material Icons";line-height:1;box-sizing:border-box;pointer-events:auto;text-transform:none;letter-spacing:normal;word-wrap:normal;white-space:nowrap;direction:ltr;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-feature-settings:"liga"} .b-stats_bar .stat_names:hover
+
+/*  Стили для индекса списков пользователя */
+6px;margin:.0625rem 0 0 .5rem;border-radius:2px;box-shadow:inset 0 0 0 1px;font-size:12px;font-weight:bold;white-space:nowrap} .p-user_rates-index .list-lines tr td .anons::first-letter,.p-user_rates-index .list-lines tr td .rewatches:not(:empty)::first-letter,.p-user_rates-index .list-lines tr td .ongoing::first-letter{text-transform:uppercase} .p-user_rates-index .list-lines tr td .anons{color:var(--color-warning)} .p-user_rates-index .list-lines tr td .rewatches:not(:empty){color:var(--color-info)} .p-user_rates-index .list-lines tr td .ongoing{color:var(--color-success)} .p-user_rates-index
+
+/*  Стили для меток состояния в списке пользователя */
+.l-content>.mylist a::after{top:0;height:20px;margin:auto 12px} .p-user_rates-index .l-content>.mylist a[data-id=planned]::after{content:"Запланировано"} .p-user_rates-index .l-content>.mylist a[data-id=watching]::after{content:"Смотрю"} .p-user_rates-index .l-content>.mylist a[href*="/manga/"][data-id=watching]::after{content:"Читаю"} .p-user_rates-index .l-content>.mylist a[data-id=rewatching]::after{content:"Пересматриваю"} .p-user_rates-index .l-content>.mylist a[href*="/manga/"][data-id=rewatching]::after{content:"Перечитываю"} .p-user_rates-index .l-content>.mylist
+
+/*  Стили для завершенных/брошенных меток */
+.l-content>.mylist a[data-id=completed]::after{content:"Просмотрено"} .p-user_rates-index .l-content>.mylist a[href*="/manga/"][data-id=completed]::after{content:"Прочитано"} .p-user_rates-index .l-content>.mylist a[data-id=on_hold]::after{content:"Отложено"} .p-user_rates-index .l-content>.mylist a[data-id=dropped]::after{content:"Брошено"} .p-user_rates-index .l-content>.mylist a span{position:absolute;top:0;right:0;padding:2px 4px;margin:6px 4px;background:var(--color-accent);border-radius:2px;color:var(--color-text-on-accent);font-size:14px;font-weight:bold;line-height:.8} .p-user_rates-index
+
+/*  Общие стили и сбросы */
+,.m3,.m4,.m5,.m6,.m7,.m8,.m10,.m12,.m15,.m20,.m25,.m30,.m40,.m50{margin-bottom:.5rem !important} .m10,.m13{margin-bottom:0 !important} div.body{line-height:inherit} h2,h3,h4{color:var(--color-text-primary)} h3{color:var(--color-text-primary);font-size:1.5rem;line-height:1.5;margin:.25em 0 .375em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden} hr{margin:.5rem 0;background-color:var(--color-border);background-image:none} input{background:rgba(0,0,0,0);border:0;color:inherit} .block,.c-column{line-height:inherit
+
+/*  Стили для ошибок, упоминаний и прочего */
+,0,0,0);border:0;color:inherit} .block,.c-column{line-height:inherit !important} .block{margin-bottom:.5rem} .b-errors{margin-bottom:.5rem;line-height:inherit} .b-errors .subheadline{margin-bottom:0;border:0} .red{border:0} .b-mention{color:var(--color-link)} .b-mention:hover{color:var(--color-link-hover)} .b-mention:active{color:var(--color-link-active)} .b-mention s{color:inherit} .b-menu-line{line-height:1.5} .b-nothing_here{margin-left:0;color:var(--color-text-disabled);font-size:.875rem;line-height:2.5rem} .b-nothing_here a{color:var(--color-link)} .b-nothing_here
+
+/*  Стили для всплывающих подсказок */
+span::after,.b-log_entry .spoiler.collapse span::after,.b-user_rate_log .spoiler.collapse span::after{right:100%;bottom:0;transform:translateX(12px)} .p-messages .mass-actions .action a:hover::after,.b-stats_bar .compatibility .text:hover:first-child::after,.b-stats_bar .compatibility a[href*="/similar/"]:hover::after,.p-dialogs .misc-links>a:hover::after,.b-user_history-line .destroy:hover::after,.b-ban .spoiler.collapse span:hover::after,.b-log_entry .spoiler.collapse span:hover::after,.b-user_rate_log .spoiler.collapse span:hover::after{transform:translateX(0)} .p-profiles .profile-head
